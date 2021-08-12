@@ -138,17 +138,16 @@
   }
   #projects .main-projects {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px 0px;
-    justify-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 30vw);
+    gap: 30px;
   }
   #projects .main-projects .project-tile {
-    max-width: 30vw;
-    min-height: 100%;
+    width: 100%;
   }
   #projects .main-projects img {
-    height: 100vh;
-    max-height: 200px;
+    height: 40vh;
+    max-height: 250px;
   }
 }
 /*# sourceMappingURL=main.css.map */
