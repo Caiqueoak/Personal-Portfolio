@@ -129,7 +129,13 @@
 #contact .contact-list a {
   color: white;
   text-decoration: none;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
+}
+
+@media screen and (min-width: 425px) {
+  #contact .contact-list a {
+    font-size: 1.25rem;
+  }
 }
 
 @media screen and (min-width: 760px) {
