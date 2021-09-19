@@ -2,9 +2,18 @@
 
 // MOBILE RESOLUTION
 
+html {
+  scroll-behavior: smooth;
+}
+
+*{
+  transition: all .3s;
+}
+
 // NAVBAR
 #navbar {
   position: fixed;
+  z-index: 99;
   background-color: $navbar-color;
   top: 0;
   width: 100vw;
@@ -20,6 +29,14 @@
     @media screen and (min-width: 450px) {
       justify-content: flex-end;
       padding-right: 5vw;
+    }
+
+    & li:hover {
+      transform: translateY(-2px);
+
+      a {
+        font-size: 1.55rem;
+      }
     }
 
     &-items {
@@ -87,6 +104,7 @@
       flex-direction: column;
       text-decoration: none;
       width: 90%;
+      box-shadow: 0 0 10px -2px black;
 
       img {
         box-shadow: 0 0 5px 0px black;
@@ -156,6 +174,12 @@
 
       .project-tile {
         width: 100%;
+
+        &:hover {
+          box-shadow: 0 0 30px -2px black;
+          width: 102%;
+          transform: translateY(-10px);
+        }
       }
       img {
         height: 40vh;
@@ -163,4 +187,17 @@
       }
     }
   }
+  .contact-list li:hover{
+    transform: translateY(-3px);
+
+    i{
+      animation: bounce .5s infinite alternate-reverse;
+      animation-delay: .3s;
+    } 
+  }
+}
+
+@keyframes bounce {
+  from{transform: translateY(-2px);}
+  to{transform: translateY(2px);}
 }

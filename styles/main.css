@@ -5,8 +5,17 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  transition: all .3s;
+}
+
 #navbar {
   position: fixed;
+  z-index: 99;
   background-color: #4b4bb9;
   top: 0;
   width: 100vw;
@@ -27,6 +36,14 @@
     justify-content: flex-end;
     padding-right: 5vw;
   }
+}
+
+#navbar .navbar-list li:hover {
+  transform: translateY(-2px);
+}
+
+#navbar .navbar-list li:hover a {
+  font-size: 1.55rem;
 }
 
 #navbar .navbar-list-items {
@@ -90,6 +107,7 @@
   flex-direction: column;
   text-decoration: none;
   width: 90%;
+  box-shadow: 0 0 10px -2px black;
 }
 
 #projects .main-projects .project-tile img {
@@ -151,9 +169,30 @@
   #projects .main-projects .project-tile {
     width: 100%;
   }
+  #projects .main-projects .project-tile:hover {
+    box-shadow: 0 0 30px -2px black;
+    width: 102%;
+    transform: translateY(-10px);
+  }
   #projects .main-projects img {
     height: 40vh;
     max-height: 250px;
+  }
+  .contact-list li:hover {
+    transform: translateY(-3px);
+  }
+  .contact-list li:hover i {
+    animation: bounce .5s infinite alternate-reverse;
+    animation-delay: .3s;
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(-2px);
+  }
+  to {
+    transform: translateY(2px);
   }
 }
 /*# sourceMappingURL=main.css.map */
